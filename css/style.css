@@ -57,6 +57,16 @@ iframe {
     margin: 0;
 }
 
+a {
+    color: rgba(41, 255, 31, 1);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(41, 255, 31, 1);
+    text-decoration: none;
+}
+
 .navbar {
     background-color: rgba(50, 60, 67, 1);
     color: #949a9d;
@@ -185,12 +195,16 @@ iframe {
 #trainer,
 #courts {
     background-color: #FDE900;
+    font-size: 22px;
+    font-family: 'FiraSans-Light';
 }
 
 #partner {
     background-color: #d6d8d9;
     color: #323c43;
-    padding-bottom: 70px;
+    /*padding-bottom: 70px;*/
+    font-size: 22px;
+    font-family: 'FiraSans-Light';
 }
 
 #trainer {}
@@ -203,6 +217,8 @@ iframe {
 #kontakt {
     background-color: #323c43;
     color: #d6d8d9;
+    font-size: 22px;
+    font-family: 'FiraSans-Light';
 }
 
 .client-response {
@@ -293,7 +309,7 @@ iframe {
 }
 
 .btn-default {
-    padding: 10px;
+    padding: 20px;
     font-size: 14px;
 }
 
@@ -309,6 +325,7 @@ iframe {
 
 .footer {
     margin-top: 70px;
+    font-size: 16px;
 }
 
 .scroll-up {
@@ -334,6 +351,11 @@ iframe {
     border-radius: 0;
     background-color: #323c43;
     color: #d6d8d9;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none;
 }
 
 .modal h1,
