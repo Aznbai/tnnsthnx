@@ -297,7 +297,8 @@ a:hover {
     margin-top: 35px;
 }
 
-.gmap-overlay {
+
+/*.gmap-overlay {
     background: transparent;
     position: absolute;
     width: 100%;
@@ -307,6 +308,7 @@ a:hover {
 #map-canvas {
     pointer-events: none;
 }
+*/
 
 .btn-default {
     padding: 20px;
@@ -365,6 +367,21 @@ a:hover {
 .modal h5,
 .modal h6 {
     color: rgba(41, 255, 31, 1);
+}
+
+
+/* Map */
+
+@media(max-width:768px) {
+    .map {
+        height: 75%;
+    }
+}
+
+#gmap-one {
+    pointer-events: none;
+    height: 400px;
+    width: 100%;
 }
 
 
