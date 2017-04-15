@@ -14,6 +14,11 @@
 }
 
 @font-face {
+    font-family: 'FiraSans-Medium';
+    src: url('../fonts/FiraSans-Medium.otf');
+}
+
+@font-face {
     font-family: 'FiraSans-Light';
     src: url('../fonts/FiraSans-Light.otf');
 }
@@ -24,7 +29,7 @@
 }
 
 body {
-    font-family: 'FiraSans-Regular';
+    font-family: 'FiraSans-Light';
     font-size: 16px;
 }
 
@@ -137,7 +142,7 @@ a:hover {
     line-height: 40px;
 }
 
-.logo-main {
+.logo-slogan {
     font-size: 58px;
     margin-top: 0;
 }
@@ -183,8 +188,9 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.subline {
+.product-subline {
     font-family: 'FiraSans-LightItalic';
+    font-size: 16px;
 }
 
 #intro {
@@ -207,7 +213,9 @@ a:hover {
     font-family: 'FiraSans-Light';
 }
 
-#trainer {}
+#trainer .subline {
+    font-size: 16px;
+}
 
 #courts {
     padding-top: 60px;
@@ -221,7 +229,7 @@ a:hover {
     font-family: 'FiraSans-Light';
 }
 
-.client-response {
+.review-text {
     font-size: 12px;
 }
 
@@ -230,7 +238,9 @@ a:hover {
     padding-right: 15px;
 }
 
-.client-response-name {}
+.review-subline {}
+
+.review-headline {}
 
 .btn-default {
     color: #333;
