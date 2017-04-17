@@ -7,6 +7,7 @@
 @grey: rgba(83, 91, 97, 1);
 @grey-light: rgba(214, 216, 217, 1);
 @ps-factor: 1.333;
+@navbar-height: 80px;
 @menu-size: 12px*@ps-factor;
 @motto-size: 38px*@ps-factor;
 @slogan-size: 60px*@ps-factor;
@@ -41,6 +42,11 @@
 
 /*general tag data*/
 
+
+/*section {
+    z-index: -101;
+}*/
+
 h1 {
     font-size: @headline-size;
 }
@@ -55,12 +61,70 @@ input::-webkit-input-placeholder {
     font-family: 'FiraSans-LightItalic';
 }
 
+input::-moz-placeholder,
+input:-moz-placeholder,
+textarea::-moz-placeholder,
+textarea:-moz-placeholder {
+    font-size: @contact-input-placeholder-size;
+    font-family: 'FiraSans-LightItalic';
+    opacity: 1;
+}
+
+
+/*greenline z-index handling start*/
+
+.test-polygon,
+#trainer,
+#courts,
+#partner,
+#kontakt {
+    z-index: -102;
+}
+
+nav {
+    z-index: 1000000;
+}
+
+.product-thumb,
+#gmap-one {
+    z-index: 100;
+}
+
+
+/*greenline z-index handling end*/
+
 
 /*navbar*/
+
+.navbar-toggle {
+    margin-top: 24px;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: @grey-dark;
+}
 
 .navbar {
     background-color: @grey-dark;
     font-size: @menu-size;
+}
+
+.navbar-default {
+    height: @navbar-height;
+}
+
+.navbar-header {
+    padding-bottom: 0;
+    height: @navbar-height;
+}
+
+.navbar-nav,
+.navbar-collapse {
+    float: none!important;
+    position: relative;
+    z-index: 9999;
+    /*background-color: #3a3ff9;*/
 }
 
 .navbar-brand {
@@ -75,6 +139,10 @@ input::-webkit-input-placeholder {
 
 /*intro section*/
 
+#intro {
+    z-index: 1;
+}
+
 .logo-motto {
     font-size: @motto-size;
     font-family: 'Yesteryear-Regular';
@@ -85,6 +153,11 @@ input::-webkit-input-placeholder {
     font-family: 'Baloo-Regular';
 }
 
+.second-headline {
+    margin-bottom: 15px;
+    font-size: @second-headline-size;
+}
+
 .first-subline {
     font-size: @subline-size;
 }
@@ -93,8 +166,22 @@ input::-webkit-input-placeholder {
     font-size: @second-subline-size;
 }
 
+#intro i {
+    color: @green;
+    font-size: @second-headline-size*1.5;
+}
+
 
 /*products*/
+
+.test-polygon {
+    width: 100%;
+    height: 119px;
+    background-color: #FDE900;
+    -moz-clip-path: polygon(0 100%, 72% 0, 70% 52%, 100% 10%, 100% 100%);
+    -webkit-clip-path: polygon(0 100%, 72% 0, 70% 52%, 100% 10%, 100% 100%);
+    clip-path: polygon(0 100%, 72% 0, 70% 52%, 100% 10%, 100% 100%);
+}
 
 .product-caption {
     position: absolute;
@@ -171,6 +258,24 @@ input::-webkit-input-placeholder {
 }
 
 
+/*courts*/
+
+
+/* Map */
+
+@media(max-width:768px) {
+    .map {
+        height: 75%;
+    }
+}
+
+#gmap-one {
+    pointer-events: none;
+    height: 400px;
+    width: 100%;
+}
+
+
 /*client review*/
 
 .review-text {
@@ -202,10 +307,11 @@ input::-webkit-input-placeholder {
 .newsletter-text {
     font-size: @newsletter-text-size;
     font-family: 'Baloo-Regular';
+    line-height: 24px;
 }
 
 .impressum-text {
-    font-size: @newsletter-text-size;
+    font-size: @impressum-size;
     font-family: 'FiraSans-Light';
 }
 
@@ -232,4 +338,13 @@ input::-webkit-input-placeholder {
 
 .form-control {
     background-color: @grey-light;
+}
+
+.scroll-up {
+    border-radius: 50%;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    font-size: 30px;
+    color: @green;
 }
