@@ -12,3 +12,10 @@ $(document).ready(function() {
   //   $('body').addClass('test');
   // });
 }); // close out script
+$('a[href^=#]').on('click', function(e) {
+  var href = $(this).attr('href');
+  $('html, body').animate({
+    scrollTop: $(href).offset().top
+  }, 'slow');
+  e.preventDefault();
+});
